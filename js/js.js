@@ -17,7 +17,6 @@ app.controller('main', function ($scope, $http, $timeout, $mdSidenav) {
     $scope.mydramas = new Array();
     if (localStorage.dramas) {
         dramas = JSON.parse(localStorage.dramas);
-        console.log(dramas);
         if (dramas.dramaid) {
             dramas.dramaid.forEach(function (id) {
                 getDramaDetail(id);
